@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/algorithmList"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Algorithm Questions" />
+        <item
+            android:id="@+id/dataBaseQuestions"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Database Questions" />
+
+        <item
+            android:id="@+id/shellQuestion"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Shell Question" />
+
+        <item
+            android:id="@+id/randomQuestion"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Random Question" />
+
+
+        <item
+            android:id="@+id/about"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="About" />
+    </group>
+
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
+
+</menu>

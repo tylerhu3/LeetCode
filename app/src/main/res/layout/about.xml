@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/aboutpageTitle"
+        android:textColor="@color/cardview_dark_background"
+        android:textSize="20sp" />
+
+    <TextView
+
+        android:layout_margin="20dp"
+        android:text="Simple App containing some popular job interview questions. I can add questions base on request. Email to tylerhu8@gmail.com"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="@color/cardview_dark_background"/>
+
+</LinearLayout>

@@ -1,0 +1,36 @@
+{
+  "Questions": [
+    {
+      "title": "Word Frequency",
+      "description": "Write a bash script to calculate the frequency of each word in a text file words.txt.\nFor simplicity sake, you may assume:\nwords.txt contains only lowercase characters and space ' ' characters.Each word must consist of lowercase characters only.Words are separated by one or more whitespace characters.\n\nFor example, assume that words.txt has the following content:\nthe day is sunny the the\nthe sunny is is\nYour script should output the following, sorted by descending frequency:the 4\nis 3\nsunny 2\nday 1\n\nNote:\nDon't worry about handling ties, it is guaranteed that each word's frequency count is unique.",
+      "example": "",
+      "solution": "cat words.txt | tr -s ' ' '\n' | sort | uniq -c | sort -r | awk '{ print $2, $1 }'\n\ntr -s: truncate the string with target string, but only remaining one instance (e.g. multiple whitespaces)\nsort: To make the same string successive so that uniq could count the same string fully and correctly.\nuniq -c: uniq is used to filter out the repeated lines which are successive, -c means counting\nsort -r: -r means sorting in descending order\nawk '{ print $2, $1 }': \n\n\n\n",
+      "Difficulty": "Medium",
+      "extra": ""
+    },
+    {
+      "title": "Valid Phone Numbers",
+      "description": "Given a text file file.txt that contains list of phone numbers (one per line), write a one liner bash script to print all valid phone numbers.\nYou may assume that a valid phone number must appear in one of the following two formats: (xxx) xxx-xxxx or xxx-xxx-xxxx. (x means a digit)\nYou may also assume each line in the text file must not contain leading or trailing white spaces.\nFor example, assume that file.txt has the following content:\n987-123-4567\n123 456 7890\n(123) 456-7890\nYour script should output the following valid phone numbers:987-123-4567\n(123) 456-7890",
+      "example": "",
+      "solution": "Three different solutions using grep, sed, and awk\nUsing grep:\ngrep -P '^(\\d{3}-|\\(\\d{3}\\) )\\d{3}-\\d{4}$' file.txt\n\nUsing sed:\nsed -n -r '/^([0-9]{3}-|\\([0-9]{3}\\) )[0-9]{3}-[0-9]{4}$/p' file.txt\n\nUsing awk:\nawk '/^([0-9]{3}-|\\([0-9]{3}\\) )[0-9]{3}-[0-9]{4}$/' file.txt",
+      "Difficulty": "Easy",
+      "extra": ""
+    },
+    {
+      "title": "Transpose File",
+      "description": "Given a text file file.txt, transpose its content.\nYou may assume that each row has the same number of columns and each field is separated by the ' ' character.\nFor example, if file.txt has the following content:\nname age\nalice 21\nryan 30\n\n\nOutput the following:\nname alice ryan\nage 21 30",
+      "example": "",
+      "solution": "AC solution using awk and statement just like C.\nJust feel free to use for and if.\nYou can append string easily, for example, s = s a to append a with s.\nawk '\n{\n    for (i = 1; i <= NF; i++) {\n        if(NR == 1) {\n            s[i] = $i;\n        } else {\n            s[i] = s[i] \" \" $i;\n        }\n    }\n}\nEND {\n    for (i = 1; s[i] != \"\"; i++) {\n        print s[i];\n    }\n}' file.txt",
+      "Difficulty": "Medium",
+      "extra": ""
+    },
+    {
+      "title": "Tenth Line",
+      "description": "How would you print just the 10th line of a file?\nFor example, assume that file.txt has the following content:\nLine 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9\nLine 10\nYour script should output the tenth line, which is:Line 10\n\n[show hint]\nHint:\n1. If the file contains less than 10 lines, what should you output?\n2. There's at least three different solutions. Try to explore all possibilities.",
+      "example": "",
+      "solution": "# Solution 1\ncnt=0\nwhile read line && [ $cnt -le 10 ]; do\n  let 'cnt = cnt + 1'\n  if [ $cnt -eq 10 ]; then\n    echo $line\n    exit 0\n  fi\ndone < file.txt\n\n# Solution 2\nawk 'FNR == 10 {print }'  file.txt\n# OR\nawk 'NR == 10' file.txt\n\n# Solution 3\nsed -n 10p file.txt\n\n# Solution 4\ntail -n+10 file.txt|head -1",
+      "Difficulty": "Easy",
+      "extra": ""
+    }
+  ]
+}

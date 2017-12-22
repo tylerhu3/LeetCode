@@ -1,0 +1,88 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hu.tyler.leetcode.DetailQuestion">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/detailQuestionRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/detailQuestionTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:gravity="center"
+
+                android:text="Title"
+                android:textColor="@color/cardview_dark_background"
+                android:textSize="25sp" />
+
+            <TextView
+                android:id="@+id/detailQuestionDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailQuestionTitle"
+                android:layout_margin="10dp"
+                android:text="Information"
+                android:textColor="@color/cardview_dark_background"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="8dp" />
+
+            <TextView
+                android:id="@+id/detailQuestionExample"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detailQuestionDescription"
+                android:layout_margin="10dp"
+                android:text="Example input/output"
+                android:textColor="@color/cardview_dark_background" />
+            <ImageView
+                android:layout_below="@id/detailQuestionExample"
+                android:id="@+id/detailQuestionExamplePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/fragSolutionButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solution"
+                android:layout_below="@id/detailQuestionExamplePicture" />
+
+            <!--<TextView-->
+            <!--android:id="@+id/detailQuestionAnswer"-->
+            <!--android:layout_width="250dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:layout_marginTop="13dp"-->
+            <!--android:background="?android:attr/selectableItemBackground"-->
+            <!--android:clickable="true"-->
+            <!--android:focusable="true"-->
+            <!--android:text="Long Touch Here to view answer"-->
+            <!--android:textColor="@color/cardview_dark_background"-->
+            <!--android:textSize="20dp"-->
+            <!--android:layout_below="@+id/detailQuestionExample"-->
+            <!--android:layout_centerHorizontal="true" />-->
+
+            <!--<Button-->
+            <!--android:text="Solution"-->
+            <!--android:id="@+id/solutionButton"-->
+            <!--android:onClick="toSolution"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_margin="10dp"-->
+            <!--android:layout_below="@+id/detailQuestionExample" />-->
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+</FrameLayout>
