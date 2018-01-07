@@ -1,7 +1,7 @@
 # LeetCodePlus
 Practicing with NavigationView, RecyclerView, Fragments, JSON Files, Android Fonts
 Screenshots of App Below:
-<img src="https://user-images.githubusercontent.com/30193978/34647485-d771c2de-f338-11e7-9b4b-d57b7576b18c.jpg" width="300" height="300">
+<img src="https://user-images.githubusercontent.com/30193978/34647485-d771c2de-f338-11e7-9b4b-d57b7576b18c.jpg" width="400" height="790">
 
 
 ![screenshot_20180106-224603](https://user-images.githubusercontent.com/30193978/34647485-d771c2de-f338-11e7-9b4b-d57b7576b18c.jpg)
