@@ -1,5 +1,8 @@
 # LeetCodePlus
-Practicing with NavigationView, RecyclerView, Fragments, JSON Files, Android Fonts
+App implementing use of NavigationView, RecyclerView, Fragments, JSON Files, Android Fonts. This APP is not completely flushed out, but I got it to the point when I like the look of it, so I will go back and update it when I have time. It's a simple app that takes some coding interview questions from the popular website leetcode, as well as other sources, hence the "plus" and push them in this app. The questions themselves are stored into JSON files, then as the APP starts, the data is moved to RecyclerViews and then into their respective Fragments.
+
+As of Today, 1/7/2018: I notice I had a few classes that did the same thing, it's basically all the Fragment classes that shows RecyclerViews, so in my future revision, I would probably change all of them into just one single class call "GeneralList" or something of that nature.
+
 Screenshots of App Below:
 <img src="https://user-images.githubusercontent.com/30193978/34647485-d771c2de-f338-11e7-9b4b-d57b7576b18c.jpg" width="400" height="790">
 <img src="https://user-images.githubusercontent.com/30193978/34647486-d78e29d8-f338-11e7-90ae-ad7cd30d1ddb.jpg" width="400" height="790">
